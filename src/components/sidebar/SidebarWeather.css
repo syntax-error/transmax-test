@@ -1,0 +1,48 @@
+.Sidebar-Weather {
+    color: white;
+    padding: 0 10%;
+    font-size: 14px;
+}
+
+.Sidebar-Weather-today {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.Sidebar-Weather-today-data, .Sidebar-Weather-today-icon {
+    flex: 1;
+    text-align: center;
+}
+.Sidebar-Weather-today-data > div {
+    width: min-content;
+}
+.Sidebar-Weather-today-icon {
+    font-size: 70px;
+}
+.Sidebar-Weather-location {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.Sidebar-Weather-temperature {
+    font-size: 40px;
+}
+
+.Sidebar-Weather-datetime {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.Sidebar-Weather-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.Sidebar-Weather-row .Sidebar-Weather-label {
+    width: 60%;
+}
+.Sidebar-Weather-row .Sidebar-Weather-data {
+    flex: 1;
+    font-weight: bold;
+}

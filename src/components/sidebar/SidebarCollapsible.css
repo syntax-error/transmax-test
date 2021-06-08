@@ -1,0 +1,31 @@
+.Sidebar-Collapsible {
+    margin: 30px 5% 0;
+    border: 1px solid #242a31;
+    background-color: #151e27;
+    color: white;
+}
+
+.Sidebar-Collapsible-header {
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Sidebar-Collapsible-toggle {
+    float: right;
+}
+
+.Sidebar-Collapsible-content {
+    transition: height 1s;
+    overflow: hidden;
+    position: relative;
+}
+
+.Sidebar-Collapsible-content {
+    border-top: 1px solid #242a31;
+}
+
+.Sidebar-Collapsible.close .Sidebar-Collapsible-content {
+    height: 0;
+}

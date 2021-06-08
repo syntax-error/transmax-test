@@ -1,0 +1,25 @@
+.Sidebar {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c10;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.5s;
+}
+
+.Sidebar.open {
+    width: 300px;
+}
+.Sidebar.close {
+    width: 50px;
+}
+
+.Sidebar .Sidebar-header {
+    color: #7d7e82;
+    padding: 10px;
+    font-size: 32px;
+}
+
+.Sidebar .Sidebar-header .Sidebar-toggle{
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+
+.Sidebar-Routes.open .Sidebar-Collapsible-content {
+    height: 325px;
+}
+
+.Sidebar-Routes-route {
+    border-top: 1px solid #242a31;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 70px
+}
+
+.Sidebar-Routes-route-upper-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar-Routes-route-lower-row {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar-Routes-status-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.Sidebar-Routes-status-circle.heavy {
+    background-color: #ea0200;
+}
+
+.Sidebar-Routes-status-circle.moderate {
+    background-color: #ffd800;
+}
+
+.Sidebar-Routes-route-name, .Sidebar-Routes-route-start-end {
+    flex: 1;
+}
+
+.Sidebar-Routes-route-name {
+    font-weight: bold;
+}
+
+.Sidebar-Routes-route-start-end {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Sidebar-Routes-status, .Sidebar-Routes-route-arrow {
+    width: 20px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sidebar-Routes-distance, .Sidebar-Routes-duration {
+    width: 80px;
+    text-align: right;
+}
+
+.Sidebar-Routes-distance {
+    font-size: 12px;
+}
+
+.Sidebar-Routes-duration {
+    font-weight: bold;
+}
+.Sidebar-Routes-duration .number {
+    font-size: 28px;
+}

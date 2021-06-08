@@ -1,0 +1,84 @@
+/*
+  Pie chart adapted from https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e
+ */
+.Sidebar-Ramps {
+    margin-bottom: 30px;
+}
+
+
+.Sidebar-Ramps .Sidebar-Collapsible-content{
+    height: 240px;
+}
+
+.Sidebar-Ramps-donut {
+    border-radius: 100%;
+    position: absolute;
+    margin: 60px auto;
+    height: 120px;
+    width: 120px;
+    background-color: #151e27;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.Sidebar-Ramps-pie {
+    border-radius: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+    margin: 30px auto;
+}
+.Sidebar-Ramps-pie-segment {
+    --a: calc(var(--over50, 0) * -100%);
+    --b: calc((1 + var(--over50, 0)) * 100%);
+    --degrees: calc((var(--offset, 0) / 100) * 360);
+    --webkit-clip-path: polygon(var(--a) var(--a), var(--b) var(--a), var(--b) var(--b), var(--a) var(--b));
+    clip-path: polygon(var(--a) var(--a), var(--b) var(--a), var(--b) var(--b), var(--a) var(--b));
+    height: 100%;
+    position: absolute;
+    transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--degrees) * 1deg));
+    transform-origin: 50% 100%;
+    width: 100%;
+    z-index: calc(1 + var(--over50));
+    transition: transform 0.5s linear;
+}
+.Sidebar-Ramps-pie-segment:after,
+.Sidebar-Ramps-pie-segment:before {
+    background: var(--bg, #e74c3c);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.Sidebar-Ramps-pie-segment:before {
+    --degrees: calc((var(--value, 45) / 100) * 360);
+    transform: translate(0, 100%) rotate(calc(var(--degrees) * 1deg));
+    transform-origin: 50% 0;
+    transition: transform 0.5s linear;
+}
+.Sidebar-Ramps-pie-segment:after {
+    opacity: var(--over50, 0);
+}
+.Sidebar-Ramps-pie-label {
+    --degrees: calc((var(--value) / 2 + var(--offset))  / 100 * 360deg + 270deg);
+    position: absolute;
+    color: var(--bg);
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    text-align: right;
+    margin: 0 auto;
+    z-index: 101;
+    transform: rotate(var(--degrees));
+    transform-origin: 0 0;
+    transition: transform 0.5s linear;
+}
+.Sidebar-Ramps-pie-label > span {
+    position: absolute;
+    right: 0;
+    transform: rotate(calc(-1 * var(--degrees)));
+    transition: transform 0.5s linear;
+}
